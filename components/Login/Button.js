@@ -8,7 +8,7 @@ const theme = {
   fourth: '#ce2e6c'
 }
 
-export default class Button extends React.Component {
+export class Button extends React.Component {
   render(){
     const {label, onPress} = this.props;
     return(
