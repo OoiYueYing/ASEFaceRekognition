@@ -36,7 +36,7 @@ export default class HomeScreen extends React.Component {
     const data = require('../mockdata/db.json')
     if(data){
       this.setState({
-        dataSource: data.professors,
+        dataSource: data.professors[0],
         courses: data.courses
       })
     } else {
@@ -49,8 +49,8 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
           <Text style={styles.title}>
-            {/* Welcome Professor {this.state.dataSource.professors[0].fullName} Here are your courses */}
-            Welcome Professor xxx Here are your courses
+            Welcome Professor {this.state.dataSource.full_name} Here are your courses
+            {/* Welcome Professor xxx Here are your courses */}
           </Text>
           <View style = {{flex:7 , marginBottom:10}} >
           <FlatList
