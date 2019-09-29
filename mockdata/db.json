@@ -1,0 +1,93 @@
+{
+    "professors": [
+      {
+        "id": 1,
+        "full_name": "Sebastian",
+        "email": "sebastian@coding.com",
+        "position": "Assoc Prof"
+      },
+      {
+        "id": 2,
+        "full_name": "Steve",
+        "email": "steve@codingt.com",
+        "position": "Assistant Prof"
+      },
+      {
+        "id": 3,
+        "full_name": "Ann",
+        "email": "ann@coding.com",
+        "position": "Phd student"
+      }
+    ] ,
+
+    "students": [
+        {
+          "id": "U123123",
+          "full_name": "student1"
+        },
+        {
+          "id": "U346346",
+          "full_name": "student2"
+        },
+        {
+          "id": "U674747",
+          "full_name": "student3"
+        }
+      ] ,
+    
+      "courses": [
+        {   
+            "id": "1",
+            "name": "CZ2342 Finding your passion",
+            "Lecture": ["Lect1", "Lect2"],
+            "Tutorial": ["Tr1", "Tr2"]
+        },
+        {
+            "id": "2",
+            "name": "CZ4324 Sound and music in computing",
+            "Lecture": ["Lect1", "Lect2"],
+            "Tutorial": ["Tr1", "Tr2"],
+            "lab" : ["L1","L2"]
+        },
+        {
+            "id": "3",
+            "name": "CZ2567 Data structure",
+            "Lecture": ["Lect1", "Lect2"],
+            "Tutorial": ["Tr1", "Tr2"]
+        },
+        {   
+            "id": "4",
+            "name": "CZ3456 Algorithms",
+            "Lecture": ["Lect1", "Lect2"],
+            "Tutorial": ["Tr1", "Tr2"]
+        },
+        {   
+            "id": "5",
+            "name": "CZ2342 UI/UX",
+            "Lecture": ["Lect1", "Lect2"],
+            "Tutorial": ["Tr1", "Tr2"],
+            "lab" : ["L1","L2"]
+        },
+        {   
+            "id": "6",
+            "name": "CZ2657 Design Thinking",
+            "Lecture": ["Lect1", "Lect2"],
+            "Tutorial": ["Tr1", "Tr2"]
+        },
+        {   
+            "id": "7",
+            "name": "CZ4577 Rasberry pi",
+            "Lecture": ["Lect1", "Lect2"],
+            "Tutorial": ["Tr1", "Tr2"],
+            "lab" : ["L1","L2"]
+        },
+        {   
+            "id": "8",
+            "name": "CZ3445 Engineering Communications",
+            "Lecture": ["Lect1", "Lect2"],
+            "Tutorial": ["Tr1", "Tr2"],
+            "lab" : ["L1","L2"]
+        }
+      ]
+}
+

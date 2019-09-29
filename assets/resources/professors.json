@@ -1,0 +1,22 @@
+{
+    "professors": [
+        {
+          "id": 1,
+          "full_name": "Sebastian",
+          "email": "sebastian@codingthesmartway.com",
+          "position": "Assoc Prof"
+        },
+        {
+          "id": 2,
+          "full_name": "Steve",
+          "email": "steve@codingthesmartway.com",
+          "position": "Assistant Prof"
+        },
+        {
+          "id": 3,
+          "full_name": "Ann",
+          "email": "ann@codingthesmartway.com",
+          "position": "Phd student"
+        }
+      ] 
+}

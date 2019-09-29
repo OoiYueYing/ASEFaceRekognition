@@ -1,5 +1,5 @@
 import React from 'react'
-import {Image, KeyboardAvoidingView, StyleSheet} from 'react-native'
+import {Image, KeyboardAvoidingView, StyleSheet, View} from 'react-native'
 import {Button, FormTextInput} from '../components/Login'
 const imageLogo = require ("../assets/images/splash.png" )
 
@@ -30,8 +30,7 @@ export default class LoginScreen extends React.Component {
     render() {
         return (
         <KeyboardAvoidingView style={styles.container} behavior="padding">
-            <Image source={imageLogo} style = {styles.logo} />
-
+            <Image style={styles.avatar} source={{uri:'https://img.icons8.com/dusk/64/000000/face-id.png'}}/>
             <FormTextInput
             iconName="user"
             placeholder="Username"
@@ -46,7 +45,6 @@ export default class LoginScreen extends React.Component {
             value={this.state.password}
             onChangeText={text => this.setState({ password: text })}
             />
-
         <Button label="Login" onPress={this.handleLoginPress}/>
         </KeyboardAvoidingView>
         )
@@ -59,13 +57,14 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      paddingHorizontal: '10%',
       backgroundColor: theme.first
     },
-    logo:{
-      flex:1,
-      width: 190,
-      height: 190
+    avatar:{
+      width: 150,
+      height: 150,
+      marginBottom:30,
+      alignSelf:'center',
+      position: 'relative',
+      marginTop:70
     }
-  
   })

@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     borderColor: theme.fourth
   },
   text: {
-    color: "#fffaf0",
+    color: "gray",
     textAlign: "center",
     height: 20
   }

@@ -7,17 +7,35 @@ const theme = {
   third: '#6b778d', //Pale red [Pink tone]
   fourth: '#ff6768' //Strong pink
 }
-export default class ExampleOne extends Component {
+export default class Course extends Component {
   constructor(props) {
     super(props);
-    var showLecture = true;
-    var showTutorial = true;
-    var showLab = true;
+    this.state = {
+      showLecture: true,
+      showTutorial : true,
+      showLab : true,
+      details:[],
+      courseName: ""
+    };
+  }
+  componentDidMount() {
+    console.log("setting state")
+    const data = require('../mockdata/db.json')
+    this.setState({
+      showLecture: this.props.showLecture,
+      showTutorial: this.props.showTutorial,
+      showLab: this.props.showLab,
+      courseName: data.courses[this.props.id - 1].name
+    });
+
+  }
+ render() {
+    
     const lectureButton = (
-        <TouchableOpacity>
-        <Text style={styles.btnText} title="Lecture"> Lecture </Text>
-        </TouchableOpacity>
-    );
+      <TouchableOpacity>
+      <Text style={styles.btnText} title="Lecture"> Lecture </Text>
+      </TouchableOpacity>
+    )
     const tutorialButton = (
         <TouchableOpacity>
         <Text style={styles.btnText} title="Tutorial"> Tutorial </Text>
@@ -28,31 +46,26 @@ export default class ExampleOne extends Component {
         <Text style={styles.btnText} title="Lab"> Lab </Text>
         </TouchableOpacity>
     );
-    if (showLecture == true && showTutorial == true && showLab == true)
+    if (this.state.showLecture == true && this.state.showTutorial == true && this.state.showLab == true)
     {   
-        this.state = {
-        Row: ['CZ2001 Introduction to Algorithms'],
+        this.state.details = {
+        Row: [this.state.courseName],
         tableHead: [lectureButton,tutorialButton ,labButton ],
       }
     }
-    else if (showLecture == true && showTutorial == true && showLab == false)
+    else if (this.state.showLecture == true && this.state.showTutorial == true && this.state.showLab == false)
     {   
-        this.state = {
-        Row: ['CZ2001 Introduction to Algorithms'],
+        this.state.details = {
+        Row: [this.state.courseName],
         tableHead: [lectureButton,tutorialButton],
       }
     }
-  }
- render() {
-    
-    const state = this.state;
-    
     return (
       <View style={styles.container}>
         <Table borderStyle={{borderWidth: 0},{borderRadius: 50}, {margin:10}}>
-          <Row data={state.Row} style={styles.head} textStyle={styles.textRow}/>
+          <Row data={this.state.details.Row} style={styles.head} textStyle={styles.textRow}/>
          
-            <Row data = {state.tableHead} style={styles.head}  />
+            <Row data = {this.state.details.tableHead} style={styles.head}  />
             
         </Table>
       </View>
@@ -61,7 +74,7 @@ export default class ExampleOne extends Component {
   }
 }
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 0, paddingTop: 0 , alignSelf: 'stretch', alignItems: 'center', justifyContent: 'center', borderRadius:60},
+  container: { flex: 1, padding: 10, paddingTop: 0 , alignSelf: 'stretch', alignItems: 'center', justifyContent: 'center', borderRadius:60},
   head: { height: 40, width: 250, backgroundColor: theme.first },
   btnText: { fontSize: 20, margin: 6, fontFamily:'notoserif', color: theme.fourth, textAlign: 'center' },
   textRow: { margin: 6, fontFamily:'Roboto',  color: theme.fourth },
