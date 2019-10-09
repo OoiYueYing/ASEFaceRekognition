@@ -29,20 +29,21 @@ export default class Course extends Component {
       courseName: data.courses[this.props.id - 1].name
     });
   }
- render() {
 
+ render() {
+    
     const lectureButton = (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => this.props.onPress(this.props, 'lecture')}>
         <Text style={styles.btnText} title="Lecture"> Lecture </Text>
       </TouchableOpacity>
     );
     const tutorialButton = (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.onPress(this.props, 'tutorial')}>
         <Text style={styles.btnText} title="Tutorial"> Tutorial </Text>
         </TouchableOpacity>
     );
     const labButton = (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.onPress(this.props, 'lab')}>
         <Text style={styles.btnText} title="Lab"> Lab </Text>
         </TouchableOpacity>
     );

@@ -112,8 +112,7 @@ export default class CameraScreen extends React.Component {
               </TouchableOpacity>
               <TouchableOpacity
                 style={{
-                  flex: 0.1,
-                  alignSelf: 'flex-start',
+                  justifyContent: 'flex-end',
                   alignItems: 'center'
                 }}
                 onPress={this._snap}
@@ -121,8 +120,7 @@ export default class CameraScreen extends React.Component {
                 <Text
                   style={{ fontSize: 18, marginBottom: 10, color: 'white' }}
                 >
-                  {' '}
-                  Snap{' '}
+                  Snap
                 </Text>
               </TouchableOpacity>
             </View>

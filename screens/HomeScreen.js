@@ -44,6 +44,14 @@ export default class HomeScreen extends React.Component {
     }
   }
 
+  navigateToAttendanceList = (props, buttonType) => {
+    console.log('pressedddd')
+    console.log(props.id)
+    console.log(buttonType)
+    console.log(props.name)
+    this.props.navigation.navigate('AttendanceListScreen')
+  }
+
   render() { 
     
     return (
@@ -57,9 +65,9 @@ export default class HomeScreen extends React.Component {
             data={this.state.courses}
             renderItem= { ({item}) => {
               if(item.lab){ 
-                return(<Course showTutorial={true}  showLab = {true} showLecture= {true} id={item.id}/>)
+                return(<Course showTutorial={true}  showLab = {true} showLecture= {true} id={item.id} name={item.name} onPress={this.navigateToAttendanceList}/>)
               } else {
-                return(<Course showTutorial = {true} showLab = {false} showLecture= {true} id={item.id} />)
+                return(<Course showTutorial = {true} showLab = {false} showLecture= {true} id={item.id} name={item.name} onPress={this.navigateToAttendanceList}/>)
               }
             }
             }

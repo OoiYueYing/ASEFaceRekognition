@@ -1,4 +1,5 @@
 import React from 'react'
+import {View, Text} from 'react-native'
 import { Icon } from 'react-native-elements'
 import {
   createBottomTabNavigator,
@@ -9,8 +10,17 @@ import HomeScreen from '../screens/HomeScreen'
 import ProfileScreen from '../screens/ProfileScreen'
 import CameraScreen from '../screens/CameraScreen'
 
+const AttendanceListScreen = () => {
+  return(
+    <View>
+      <Text>I am in AttendanceListScreen</Text>
+    </View>
+  )
+}
+
 const HomeStack = createStackNavigator({
-  HomeScreen: HomeScreen
+  HomeScreen: HomeScreen,
+  AttendanceListScreen : AttendanceListScreen
 })
 
 const ProfileStack = createStackNavigator({
