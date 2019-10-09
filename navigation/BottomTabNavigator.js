@@ -9,14 +9,8 @@ import {
 import HomeScreen from '../screens/HomeScreen'
 import ProfileScreen from '../screens/ProfileScreen'
 import CameraScreen from '../screens/CameraScreen'
+import AttendanceListScreen from '../screens/AttendanceListScreen'
 
-const AttendanceListScreen = () => {
-  return(
-    <View>
-      <Text>I am in AttendanceListScreen</Text>
-    </View>
-  )
-}
 
 const HomeStack = createStackNavigator({
   HomeScreen: HomeScreen,
