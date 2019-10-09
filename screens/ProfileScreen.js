@@ -3,10 +3,10 @@ import {Image, Text, View, StyleSheet, ActivityIndicator} from 'react-native'
 import {Button} from '../components/Login'
 
 const theme = {
-  first: '#504658',  //Very dark grayish violet.
-  second: '#f0decb', //Light grayish orange
-  third: '#ffb5b5', //Pale red [Pink tone]
-  fourth: '#ce2e6c' //Strong pink
+  first: '#17223b',  //Very dark grayish violet.
+  second: '#263859', //Light grayish orange
+  third: '#6b778d', //Pale red [Pink tone]
+  fourth: '#ff6768' //Strong pink
 }
 
 export default class ProfileScreen extends React.Component {
@@ -65,10 +65,19 @@ export default class ProfileScreen extends React.Component {
             <View style = {styles.bodyContent}>
               <Text style = {styles.title}>Welcome Professor {this.state.dataSource.professors[0].full_name}</Text>
               <Image style={styles.avatar} source={{uri:'https://bootdey.com/img/Content/avatar/avatar6.png'}}/>
-              <Text style = {styles.details}>
-                Name: {this.state.dataSource.professors[0].full_name}
-                {"\n"}Email: {this.state.dataSource.professors[0].email}
-                {"\n"}Position: {this.state.dataSource.professors[0].position}
+              <Text style = {styles.outerdetails}>
+                Name: {"\t"}
+                <Text style = {styles.details}>
+                  {this.state.dataSource.professors[0].full_name}
+                </Text>
+                {"\n"}Email: {"\t"}
+                <Text style = {styles.details}>
+                    {this.state.dataSource.professors[0].email}
+                </Text>
+                {"\n"}Position: {"\t"}
+                <Text style = {styles.details}>
+                  {this.state.dataSource.professors[0].position}
+                </Text>
               </Text>
             </View>  
           </View>
@@ -85,7 +94,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: '10%',
-    backgroundColor: theme.first
+    backgroundColor: theme.third
   },
   header:{
     height:150,
@@ -93,6 +102,7 @@ const styles = StyleSheet.create({
   body:{
     flex: 1,
     marginTop:10
+    
   },
   bodyContent:{
     flex: 1,
@@ -104,7 +114,8 @@ const styles = StyleSheet.create({
     fontSize: 27, 
     height: 75,
     textAlign: 'center',
-    color: theme.second, 
+    color: "#fff", 
+    fontFamily: 'roboto_thin'
   },
   avatar:{
     width: 150,
@@ -117,12 +128,22 @@ const styles = StyleSheet.create({
     position: 'absolute',
     marginTop:70
   },
+  outerdetails:{
+    flex: 5,
+    marginTop: 100,
+    fontSize: 20, 
+    color: "#fff", 
+    alignSelf: 'flex-start',
+    width: "100%",
+    fontFamily: 'roboto_thin'
+  },
    details:{
     flex: 5,
     marginTop: 100,
     fontSize: 20, 
-    color: theme.second, 
+    color: '#fff', 
     alignSelf: 'flex-start',
-    width: "100%"
+    width: "100%",
+    fontFamily: 'roboto_thin'
   }
 })

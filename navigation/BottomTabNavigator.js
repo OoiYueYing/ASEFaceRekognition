@@ -50,7 +50,7 @@ export default createBottomTabNavigator(
         fontSize: 15
       },
       style: {
-        backgroundColor: '#ffb5b5'
+        backgroundColor: '#17223b'
       }
     }
   }
