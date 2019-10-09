@@ -74,7 +74,7 @@ export default class Course extends Component {
 }
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 10, paddingTop: 0 , alignSelf: 'stretch', alignItems: 'center', justifyContent: 'center', borderRadius:60},
-  head: { height: 40, width: 250, backgroundColor: theme.first },
-  btnText: { fontSize: 20, margin: 6, fontFamily:'shink-regular', color: theme.fourth, textAlign: 'center' },
-  textRow: { margin: 6, fontFamily:'shink-regular',  color: theme.fourth },
+  head: { height: 40, width: 300, backgroundColor: theme.first },
+  btnText: { fontSize: 20, margin: 6, fontFamily:'roboto_light', color: theme.fourth, textAlign: 'center' },
+  textRow: {fontFamily:'shink-regular',  color: theme.fourth, fontSize: 17, alignItems: 'center', textAlign: 'center' },
 });

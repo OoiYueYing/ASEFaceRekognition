@@ -32,7 +32,7 @@
     "react-navigation": "^3.11.0"
   },
   "rnpm": {
-    "assets": ["assets/fonts/shink"]
+    "assets": ["assets/fonts/shink", "assets/fonts/roboto"]
    },
   "devDependencies": {
     "babel-preset-expo": "^6.0.0",

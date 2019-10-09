@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
     textAlignVertical: 'top',
     textAlign: 'center',
     color: '#fff',
+    fontFamily:'roboto_thin'
   }
   
 });
